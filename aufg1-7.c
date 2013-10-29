@@ -12,5 +12,4 @@ int main(void)
 	scanf("%lf", &winkel);
 	bogen = winkel*faktor;
 	printf("Ein Winkel von %lf Grad entspricht %lf rad\n\n",winkel, bogen);
-	system("Pause");
 }
