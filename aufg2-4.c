@@ -27,6 +27,6 @@ int main(void) {
         steuer = 0.45 * x - 15414;
     }
     
-    printf("Steuer: %deuro\n", steuer);
+    printf("Steuer: %d Euro\n", steuer);
     
 }
