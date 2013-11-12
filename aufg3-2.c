@@ -7,7 +7,7 @@ int main(void) {
     printf("Zahl eingeben: ");
     scanf("%f", &z);
     
-    printf("Potenz der Zahl eingeben: ");
+    printf("Exponent der Zahl eingeben: ");
     scanf("%d", &p);
     
     float sum = 1;
