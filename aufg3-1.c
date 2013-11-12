@@ -6,7 +6,7 @@ int main(void) {
     printf("Zahl eingeben: ");
     scanf("%d", &z);
     
-    printf("Potenz der Zahl eingeben: ");
+    printf("Exponent der Zahl eingeben: ");
     scanf("%d", &p);
     p = p < 0 ? -p : p;
     
