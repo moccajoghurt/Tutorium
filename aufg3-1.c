@@ -8,6 +8,7 @@ int main(void) {
     
     printf("Potenz der Zahl eingeben: ");
     scanf("%d", &p);
+    p = p < 0 ? -p : p;
     
     int sum = 1;
     int buf = p;
