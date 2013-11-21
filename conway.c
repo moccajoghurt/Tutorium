@@ -5,7 +5,7 @@
 int main() {
     //die Zeichenkette repraesentiert immer eine Conway-Folge
     char* zeile = calloc(1, 100);
-    zeile[0] = '1';
+    zeile[0] = '1'; /*Startwert ist 1*/
     // gib die erste Zeile aus
     puts(zeile);
     
