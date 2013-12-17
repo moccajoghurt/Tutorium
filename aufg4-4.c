@@ -6,7 +6,7 @@ int get_func_val(int x, int y, float* erg) {
     if ((pow(x, 2) - pow(y, 2)) <= 0)
         return 0;
     
-    *erg = sqrt(pow((float)x, 2) - pow((float)y, 2));
+    *erg = sqrt(pow(x, 2) - pow(y, 2));
     
     return 1;
 }
