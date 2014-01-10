@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, char** argv) {
     
@@ -14,13 +15,22 @@ int main(int argc, char** argv) {
         printf("could not read file \n");
         return 1;
     }
-    int count = 1;
-    unsigned char c;
-    while (fread(&c, 1, 1, fp)) {
-        printf("%02x ", c);
-        
-        if (count % 20 == 0) puts("");
-        count++;
-    }
+	
+	long lSize;
+	char* buffer;
+	
+	fseek (fp , 0 , SEEK_END);
+	lSize = ftell (fp);
+	rewind (fp);
+	
+	buffer = (char*) malloc (sizeof(char)*lSize);
+	fread (buffer, 1, lSize, fp);
     
+	int count = 1;
+	int i;
+	for (i = 0; i < lSize; i++) {
+		printf("%02x ", (unsigned char)buffer[i]);
+		if (count % 20 == 0) puts("");
+        count++;
+	}
 }
